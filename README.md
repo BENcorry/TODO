@@ -19,3 +19,5 @@ npm run build --report
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## 注意
+> 这个项目是基于firebase（谷歌产品）的数据库，所以需要翻墙才能有数据
