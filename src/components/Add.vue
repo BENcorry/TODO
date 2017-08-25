@@ -9,7 +9,11 @@
       <label>描述:</label>
       <textarea v-model="add.content"></textarea>
     </div>
-    <button @click.prevent="post">添加</button>
+    <button @click="post">添加</button>
+    
+    <!-- <router-link v-bind:to="'/'">
+        <button @click="post">添加</button>
+    </router-link> -->
   </div>
   
 </template>
@@ -27,9 +31,22 @@ export default {
   },
   methods : {
     post : function(){
-      this.$http.post('https://my-first-vue.firebaseio.com/add.json',this.add)
-      this.name = ''
-      this.content = ''
+      console.log(this.add.name)
+      if(this.add.name){
+        this.$http.post('https://my-first-vue.firebaseio.com/add.json',this.add)
+        .then(function(data){
+          console.log(data)
+          console.log(this.$router.push({path:'/'}))
+          this.add.name = ''
+          this.add.content = ''
+          this.$router.push({path:'/'})
+        })
+      }else{
+        alert('你没有填写要输入的值')
+      }
+      
+      
+      
       
     }
   }
@@ -57,9 +74,11 @@ h2{
   text-align: center;
 }
 input,textarea{
-  width: 100%;
+  width: 97%;
+  height: 30px;
   margin-top: 10px;
   margin-bottom: 10px;
+  padding-left: 10px;
 }
 textarea{
   height: 150px;

@@ -35,10 +35,12 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .item{
-  margin: 0 auto;
+  margin: 200px auto;
   max-width: 800px;
+  min-height: 300px;
   background-color: #f6f6f6;
   padding: 5px 0;
+  border-radius: 10px;
 }
 h3{
   text-align: center;
