@@ -22,5 +22,6 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 ## 注意
 > 这个项目是基于firebase（谷歌产品）的数据库，所以需要翻墙才能有数据
 
-## 项目完成基本的增加和删除功能
+## 项目完成基本的增加和删除功能\
+> 详情可以关注我的[博客](http://www.cnblogs.com/bencorry/)
 
